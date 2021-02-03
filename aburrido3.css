@@ -1,0 +1,308 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.contenedor{
+	display: grid;
+	height: 100vh;
+	grid-template-areas: "inicio inicio inicio inicio"
+						 "header header header header"
+						 "aside main main main"
+						 "aside main main main"
+						 "aside main main main"
+						 "aside main main main"
+						 "aside main main main"
+						 "aside main main main"
+						 "aside main main main"
+						 "aside main main main"
+						 "footer footer footer footer";
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: 250px 80px 50%  80px;
+	grid-gap: 2px;
+	
+
+}
+
+.inicio{
+	grid-area: inicio;
+	border:1px solid grey;
+}
+.header{
+	background:linear-gradient(rgba(200,200,200,.999),rgba(1,1,1,.9999));
+	grid-area: header;
+	border:1px solid grey;
+}
+
+.main{
+	grid-area: main;
+	border:1px solid grey;
+	padding: 10px;
+
+}
+.aside{
+	grid-area: aside;
+	border:1px solid grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer{
+	grid-area: footer;
+	border:1px solid grey;
+	text-align: center;
+	color: #fff;
+	background: black
+}
+
+
+.inicio{
+	background:linear-gradient(rgba(1,1,1,.8),rgba(46, 64, 83,.7)), url(https://cdn.pixabay.com/photo/2017/03/10/13/57/cooking-2132874_960_720.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-clip: border-box;
+	background-origin: border-box;
+	background-size: 100% 100vh;
+	background-attachment: fixed;
+	border-radius: 5px;
+	border-bottom: 10px solid black
+	
+}
+.contenedor__img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.texto{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 20px;
+	color: #fff;
+	font-size: 40px;
+}
+.span1{
+	padding-top: 40px;
+	display: flex;
+
+	justify-content: center;
+	align-items: flex-end;
+	color: grey;
+	font-size: 20px;
+
+}
+
+.header label, input{
+	display: none;
+	
+}
+
+.nav__li{
+	display: inline-block;
+	list-style: none;
+}
+.nav__li a{
+	text-decoration: none;
+	display: block;
+	color:black;
+	font-size: 20px;
+	position: relative;
+	top: 18px;
+	padding: 10px;
+	transition: 5s ease;
+	border-radius: 20px;
+
+}
+.nav__li a:hover{
+	background:linear-gradient(rgba(1,1,1,.5),rgba(255, 255, 255, .5));
+
+}
+
+@media screen and (max-width:800px){
+	.header label {
+		display: block;
+		padding: 25px;
+		font-size: 30px;
+
+	}
+	.header{
+		z-index: 100;
+	}
+	.inicio{
+		z-index: 200;
+	}
+	.nav{
+		width:70%;
+		z-index: -1;
+		background: grey;
+		transform: translateY(-1000px);
+		height: 200px;
+		border-radius: 20px;
+		transition: all 500ms ease;
+
+
+	}
+	.nav__ul{
+		display: flex;
+		flex-direction: column;
+	}
+	#menu:checked~.nav{
+		transform: translateY(0px);
+	}
+	a{
+		padding: 20px;
+	}
+	.contenedor{
+			grid-template-areas: 
+						 "inicio inicio inicio inicio"
+						 "header header header header"
+						 "main main main main"
+						 "main main main main"
+						 "main main main main"
+						 "main main main main"
+						 "main main main main"
+						 "main main main main"
+						 "main main main main"
+						 "main main main main"
+						 "aside aside aside aside"
+						 "footer footer footer footer";
+	}
+}
+/*main*/
+
+.post-list{
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+}
+.post{
+	background: #D7DBDD ;
+	border-radius: 5px;
+}
+.content{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 10px;
+	max-width: 1000px;
+	margin: auto;
+}
+.post-img-1{
+	background: url(https://static8.depositphotos.com/1005629/806/i/950/depositphotos_8068134-stock-photo-pasta-with-olives-and-parsley.jpg);
+		width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: 1.2s ease;
+}
+.post-img-2{
+	background: url(https://lh3.googleusercontent.com/proxy/RAgylEDLKuBCJP7j5w-okw2eZ6AHK9u7nPWPp8etP-fVBGqBsiN9jK_6AL5klOEXGPF9XkzW-yV3h0mJl9qsCwV5GXKN9d2CSe_VVahqMUPfnceQ30WBFvuaQTJPTEN6);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: 1.2s ease;
+}
+
+
+
+.post-img-3{
+	background: url(https://previews.123rf.com/images/satina/satina1509/satina150900030/44951099-pan.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: 1.2s ease;
+}
+
+.post-img-4{
+	background: url(https://previews.123rf.com/images/foodandmore/foodandmore1903/foodandmore190300039/118075691-preparing-chocolate-bonbons-with-an-old-whisk-to-beat-the-melted-chocolate-ingredient-lying-on-a-kit.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: 1.2s ease;
+}
+
+.post-img-5{
+	background: url(https://previews.123rf.com/images/fotek/fotek1811/fotek181100302/111908020-fresh-beef-stew-pie-on-a-cutting-board-meat-in-puff-pastry.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: 1.2s ease;
+}
+
+.post-img-6{
+	background: url(https://previews.123rf.com/images/tbralnina/tbralnina1901/tbralnina190100298/116452472-collage-of-various-pasta-dishes-top-view-.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: 1.2s ease;
+}
+
+.post{
+	overflow: hidden;
+	transition: .2s ease;
+}
+.post:hover{
+	transform: translateY(-4px);
+}
+.post-header{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.img:hover{
+	transform: scale(1.2);
+}
+.post-body{
+	padding: 15px;
+	text-align: center;
+}
+.span{
+	display: inline-block;
+	color: #515A5A ;
+	margin: 10px;
+}
+.post-body h2{
+	margin-bottom: 15px
+}
+.post-body p{
+	line-height: 1.5;
+	margin-bottom: 20px;
+	font-weight: 600;
+	color: rgba(1,1,1,1);
+}
+.post-link{
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	background-color: #1c375b;
+	color: #fff;
+	font-size: 600;
+	width: 50%;
+	margin: auto;
+	border-radius:20px;
+	transition: .2s ease;
+
+}
+.post-body .post-link:hover{
+	background-color:#6f8197;
+	transform: translateY(-2px);
+	
+}
+@media screen and (max-width: 800px){
+	.content{
+		grid-template-columns: repeat(2,1fr);
+	}
+	.
+}
+@media screen and (max-width: 600px){
+	.content{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
